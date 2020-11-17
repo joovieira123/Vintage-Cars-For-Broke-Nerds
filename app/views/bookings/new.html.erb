@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-8">
-      <h1>Add a booking here for <%#= @plant.name %>whatever car!</h1>
+      <h1>Add a booking here for <%= @car.model %>!</h1>
       <%= simple_form_for [@car, @booking] do |f| %>
         <%= f.input :description %>
         <%= f.submit "Add a booking", class: "btn btn-primary" %>
