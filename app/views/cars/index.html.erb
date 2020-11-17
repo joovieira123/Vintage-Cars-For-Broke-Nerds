@@ -1,24 +1,17 @@
-
-<div class="banner-backbround">
-  <div class="banner-content">
-    <h1> Vintage Cars for Broke Nerds </h1>
-    <p>🚙Cool vintage cars to rent🚙</p>
-    <!-- search bar of cars using  -->
-  </div>
+<div class="Tittle">
+    <h1>Vintage Cars for Broke Nerds</h1>
+    <p>Choose Vintage car for a nice round trip in your city</p>
 </div>
-
+<br>
+<!-- Have to look up how to create the searchbar -->
+<br>
 <div class="container">
-  <div class="row">
-    <h3> Cars that match your search results</h3>
-    <% @cars.each do |car| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="car-card" style="background-image: ***imageURL() padding-bottom: totpixel ">
-          <!-- card would be link to single car info  -->
-          <div>
-            <h3>   <%=link_to ${car.name}, car_path(car), class: 'card-link' %>  </h3> <!-- (in the padding of the car-card) -->
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
+
+    <ol>
+      <% @cars.each do |car| %>
+      <li> <%= link_to car.model, car_path(car)%>|<%= car.location %>  </li>
+      <% end %>
+   </ol>
+
 </div>
+
