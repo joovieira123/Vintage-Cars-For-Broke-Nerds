@@ -1,0 +1,15 @@
+<h1>New Car</h1>
+
+<%= simple_form_for(@car) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :model %>
+    <%= f.input :location %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', root_path %>
