@@ -1,7 +1,6 @@
 <h2><%= @car.model %></h2>
-<% @car.each do |car| %>
-  <%= car.location %>
-<% end %>
-<%= link_to "Hire car",  new_booking_path(@booking) %>
-<%= link_to "Go back to cars", cars_path %>
-<%= link_to "Delete car", car_path(@car) %>
+<h3>Location of car: <%= @car.location %></h3>
+<br />
+<%= link_to "Hire this car",  car_bookings_path(@booking) %>
+<%= link_to "Go back to vintage cars", root_path %> |
+<%= link_to "Delete this car", car_path(@car) %>
