@@ -1,4 +1,4 @@
-<div class="Tittle">
+<div class="Title">
     <h1>Vintage Cars for Broke Nerds</h1>
     <p>Choose Vintage car for a nice round trip in your city</p>
 </div>
@@ -6,12 +6,10 @@
 <!-- Have to look up how to create the searchbar -->
 <br>
 <div class="container">
-
-    <ol>
-      <% @cars.each do |car| %>
+  <ol>
+    <% @cars.each do |car| %>
       <li> <%= link_to car.model, car_path(car)%>|<%= car.location %>  </li>
-      <% end %>
-   </ol>
-
+    <% end %>
+  </ol>
 </div>
 
