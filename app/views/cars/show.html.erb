@@ -1,0 +1,7 @@
+<h2><%= @car.model %></h2>
+<% @car.each do |car| %>
+  <%= car.location %>
+<% end %>
+<%= link_to "Hire car",  new_booking_path(@booking) %>
+<%= link_to "Go back to cars", cars_path %>
+<%= link_to "Delete car", car_path(@car) %>
