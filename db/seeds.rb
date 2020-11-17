@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Car.new(model: 'Ford Focus', location: 'Sodermalm')
-Car.new(model: 'Rolls Royce', location: 'Gamla Stan')
-Car.new(model: 'Fiat 500', location: 'Normalm')
+Car.destroy_all
+
+Car.create(model: 'Ford Focus', location: 'Sodermalm')
+Car.create(model: 'Rolls Royce', location: 'Gamla Stan')
+Car.create(model: 'Fiat 500', location: 'Normalm')
