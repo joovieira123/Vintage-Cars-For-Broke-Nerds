@@ -1,7 +1,9 @@
 <ol>
 <% @bookings.each do |booking| %>
 <li>
- <%= booking.description %>
+  <%= link_to booking.description, booking_path(booking) %>
 </li>
 <% end %>
 </ol>
+
+<%= link_to 'Return to home page', root_path, class: "btn btn-success btn-lg"%>
