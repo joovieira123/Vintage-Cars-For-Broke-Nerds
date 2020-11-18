@@ -1,13 +1,26 @@
 <div class="abanner">
   <div class="acontainer">
-    <h2><%= @car.model %> - <%= @car.year %></h2>
-    <h3><%= @car.location %></h3>
-    <p><%= @car.price %></p>
-    <p><%= @car.description %></p>
+    <h1><%= @car.model %> - <%= @car.year %></h1>
+    <h3>Price per day: <%=@car.price %></h3>
   </div>
 </div>
 
-  <h3>Location of car: <%= @car.location %></h3>
+<div class="acontainertwo">
+  <div class="ainfo">
+    <h1><%= @car.model %></h1>
+    <h2>Year of car: <%= @car.year %></h2>
+    <h3>Location of car: <%=@car.location %></h3>
+    <br>
+    <h4>Description of car</h4>
+    <br>
+      <p><%= @car.description %></p>
+  </div>
+
+  <div class="map">
+    <p>Map</p>
+  </div>
+</div>
+
   <br>
 <%= link_to "Hire this #{@car.model}",  new_car_booking_path(@car) %>
 <br>
