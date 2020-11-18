@@ -1,13 +1,17 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-8">
-      <h1>Add a booking here for <%= @car.model %>!</h1>
-      <%= simple_form_for [@car, @booking] do |f| %>
-        <%= f.input :comments %>
-        <%= f.input :date %>
-        <%= f.submit "Add a booking", class: "btn btn-primary" %>
-      <% end %>
-        <%= link_to 'Back to car', car_path(@car) %>
+<h1 class="lTitle text-center">Add a booking here for <%= @car.model %>!</h1>
+<div class="container d-flex justify-content-center">
+
+  <%= simple_form_for [@car, @booking] do |f| %>
+
+    <div class="form-inputs text-center border lTitle rounded-lg mb-2">
+      <%= f.input :comments %>
+      <%= f.input :date %>
     </div>
-  </div>
+    <div class="text-center">
+      <%= f.submit "Add A Booking", class: "lTitle rounded-lg" %>
+    </div>
 </div>
+    <div class="form-actions btn mt-3">
+      <%= link_to 'Return To Car', car_path(@car), class: "lTitle rounded-lg" %>
+    </div>
+  <% end %>
