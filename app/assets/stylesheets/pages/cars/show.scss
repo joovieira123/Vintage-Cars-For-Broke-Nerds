@@ -1,0 +1,43 @@
+.abanner {
+  background: $blue;
+  background-size: cover;
+  background-position: center;
+  padding: 250px 0;
+}
+
+.acontainer {
+  color: $yellow;
+  text-align: center;
+}
+
+.ainfo {
+  color: $blue;
+  background: $lightblue;
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.map {
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+  border: 2px solid $blue;
+  margin-top: 20px;
+}
+
+.acontainertwo {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+
+
