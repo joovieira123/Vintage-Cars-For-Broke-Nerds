@@ -1,9 +1,9 @@
-<h1 class="lTitle text-center">Edit Car</h1>
+<h1 class="jTitle text-center">Edit Car</h1>
 <div class="container d-flex justify-content-center">
 
   <%= simple_form_for(@car) do |f| %>
 
-    <div class="form-inputs text-center border lTitle rounded-lg mb-2">
+    <div class="form-inputs text-center border jTitle rounded-lg mb-2">
       <%= f.input :model %>
       <%= f.input :year %>
       <%= f.input :price %>
@@ -11,11 +11,11 @@
       <%= f.input :description %>
     </div>
     <div class="text-center">
-      <%= f.submit "Update Car", class: "lTitle rounded-lg" %>
+      <%= f.submit "Update Car", class: "jTitle rounded-lg" %>
     </div>
 </div>
     <div class="form-actions btn mt-3">
-      <%= link_to 'Back To Home Page', root_path, class: "lTitle rounded-lg" %>
-      <%= link_to 'Return To Car', car_path(@car), class: "lTitle rounded-lg" %>
+      <%= link_to 'Back To Home Page', root_path, class: "jTitle rounded-lg" %>
+      <%= link_to 'Return To Car', car_path(@car), class: "jTitle rounded-lg" %>
     </div>
   <% end %>
