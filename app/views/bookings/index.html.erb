@@ -1,7 +1,7 @@
 <ol>
 <% @bookings.each do |booking| %>
 <li>
-  <%= link_to booking.description, booking_path(booking) %>
+  <%= booking.date %> - <%= link_to booking.comments, booking_path(booking) %>
 </li>
 <% end %>
 </ol>

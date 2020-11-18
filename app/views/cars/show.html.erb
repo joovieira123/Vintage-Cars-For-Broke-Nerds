@@ -1,5 +1,7 @@
-<h2><%= @car.model %></h2>
-<h3>Location of car: <%= @car.location %></h3>
+<h2><%= @car.model %> - <%= @car.year %></h2>
+<h3><%= @car.location %></h3>
+<p><%= @car.price %></p>
+<p><%= @car.description %></p>
 
 <br>
 <%= link_to "Hire this #{@car.model}",  new_car_booking_path(@car) %>

@@ -3,7 +3,8 @@
     <div class="col-8">
       <h1>Add a booking here for <%= @car.model %>!</h1>
       <%= simple_form_for [@car, @booking] do |f| %>
-        <%= f.input :description %>
+        <%= f.input :comments %>
+        <%= f.input :date %>
         <%= f.submit "Add a booking", class: "btn btn-primary" %>
       <% end %>
         <%= link_to 'Back to car', car_path(@car) %>
