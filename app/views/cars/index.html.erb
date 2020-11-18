@@ -8,7 +8,7 @@
 <div class="container">
   <ol>
     <% @cars.each do |car| %>
-      <li> <%= link_to car.model, car_path(car)%>|<%= car.location %>  </li>
+      <li> <%= link_to car.model, car_path(car)%> | <%= car.location %> | <%= car.price %> | <%= car.year %> | <%= car.description %></li>
     <% end %>
   </ol>
 </div>
