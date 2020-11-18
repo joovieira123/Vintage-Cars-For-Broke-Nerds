@@ -1,9 +1,41 @@
+.lpages {
+  padding: 30px;
+}
+.lcarimage{
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+
+}
 .lTitle{
     color: $yellow;
-    padding: 10px;
     background: $blue;
-    border-left: 15px;
+    padding: 10px;
+    margin:20px;
+    height: 300px;
+    length: 100px;
+    text-align: center;
+
+    h1{
+      font-size: 32px;
+      padding-top: 90px;
+
+    }
  }
+ .lTitle{
+  p{
+    font-size: 12px;
+
+  }
+ }
+.card {
+ height: 60px;
+ width: 90px;
+ padding: 15px;
+ margin: 15px;
+
+}
+
 
 
 
