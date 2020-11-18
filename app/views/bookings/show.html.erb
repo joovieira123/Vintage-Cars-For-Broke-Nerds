@@ -22,3 +22,7 @@
 </div>
 
 
+<%= link_to "Remove a booking",
+            booking_path(@booking),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
