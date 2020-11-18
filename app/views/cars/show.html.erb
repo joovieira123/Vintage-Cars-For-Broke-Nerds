@@ -1,8 +1,13 @@
 <h2><%= @car.model %></h2>
 <h3>Location of car: <%= @car.location %></h3>
+
 <br>
-<%= link_to "Hire this car",  new_car_booking_path(@car) %>
+<%= link_to "Hire this #{@car.model}",  new_car_booking_path(@car) %>
 <br>
 <%= link_to 'Return to home page', root_path %> |
-<%= link_to 'Delete this car', car_bookings_path(@car) %> |
-<%= link_to 'Edit car', edit_car_path(@car) %>
+<%= link_to 'Edit car', edit_car_path(@car) %> |
+<%= link_to "Remove #{@car.model}",
+            car_path(@car),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
