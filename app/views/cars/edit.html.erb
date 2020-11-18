@@ -1,20 +1,21 @@
-<h1>Edit details of car</h1>
+<h1 class="lTitle text-center">Edit Car</h1>
+<div class="container d-flex justify-content-center">
 
-<%= simple_form_for(@car) do |f| %>
+  <%= simple_form_for(@car) do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :model %>
-    <%= f.input :location %>
-    <%= f.input :price %>
-    <%= f.input :year %>
-    <%= f.input :description %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Return to car', car_path(@car) %>
-<%= link_to 'Return to home page', root_path %>
-
+    <div class="form-inputs text-center border lTitle rounded-lg mb-2">
+      <%= f.input :model %>
+      <%= f.input :year %>
+      <%= f.input :price %>
+      <%= f.input :location %>
+      <%= f.input :description %>
+    </div>
+    <div class="text-center">
+      <%= f.submit "Update Car", class: "lTitle rounded-lg" %>
+    </div>
+</div>
+    <div class="form-actions btn mt-3">
+      <%= link_to 'Back To Home Page', root_path, class: "lTitle rounded-lg" %>
+      <%= link_to 'Return To Car', car_path(@car), class: "lTitle rounded-lg" %>
+    </div>
+  <% end %>
