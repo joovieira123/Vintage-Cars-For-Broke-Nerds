@@ -1,0 +1,16 @@
+.abanner {
+  background-size: cover;
+  background-position: center;
+  padding: 100px;
+  background: $blue;
+  color: $yellow;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
