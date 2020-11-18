@@ -1,17 +1,19 @@
-<div class="Title">
-    <h1>Vintage Cars for Broke Nerds</h1>
-    <p>Choose Vintage car for a nice round trip in your city</p>
-</div>
-<br>
-<!-- Have to look up how to create the searchbar -->
-<br>
-<div class="container">
-  <ol>
-    <% @cars.each do |car| %>
-      <li> <%= link_to car.model, car_path(car)%> | <%= car.location %> | <%= car.price %> | <%= car.year %> | <%= car.description %></li>
-    <% end %>
-  </ol>
-</div>
-<%= link_to "Go to your bookings", bookings_path %>
-<%= link_to "Add a new car", new_car_path %>
+<div class="lpages">
+  <div class="lTitle">
+      <h1>Vintage Cars for Broke Nerds</h1>
+      <p>Choose Vintage car for a nice round trip in your city</p>
+  </div>
+  <br>
+  <!-- Have to look up how to create the searchbar -->
+  <br>
+  <div class="lcontainer">
+    <%= link_to "Go to your bookings", bookings_path %>
+    <%= link_to "Add a new car", new_car_path %>
+    <ol>
+      <% @cars.each do |car| %>
+        <li> <%= link_to car.model, car_path(car)%> | <%= car.location %> | <%= car.price %> | <%= car.year %> | <%= car.description %></li>
+      <% end %>
+    </ol>
+  </div>
 
+</div>
