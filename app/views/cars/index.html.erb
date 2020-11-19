@@ -21,6 +21,7 @@
   <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 
+
   <br>
   <button type="button" class="btn btn-success"><%= link_to "Go to your bookings", bookings_path %></button>
   <button type="button" class="btn btn-outline-success">+<%= link_to "Add a new car", new_car_path %></button>
@@ -29,6 +30,8 @@
       <% @cars.each do |car| %>
         <div class="card col-12 col-sm-6 col-md-4 col-lg-3" id="card">
           <div class="lcar-card">
+            <%#= cl_image_tag("https://res.cloudinary.com/ddep1altx/image/upload/v1605800751/samples/cloudinary-group.jpg",
+                width: 400, height: 300, crop: :fill) %>
             <%= image_tag "logo.png", class: "car-image" %>
             <div class="lcar-crad-info">
               <h4><%= link_to car.model, car_path(car)%>| <%= car.year %></h4>
