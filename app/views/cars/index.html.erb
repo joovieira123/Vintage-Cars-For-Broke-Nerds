@@ -13,7 +13,7 @@
   <div class="lcontainer">
     <div class="row">
               <% @cars.each do |car| %>
-              <div class="card db-light col-sm-12 col-md-6 col-lg-4">
+             <div class="card db-light col-12 col-md-6 col-lg-4">
 
         <div class="car.card">
             <%= link_to car.model, car_path(car)%> | <%= car.location %> | <%= car.price %> | <%= car.year %> | <%= car.description %>
