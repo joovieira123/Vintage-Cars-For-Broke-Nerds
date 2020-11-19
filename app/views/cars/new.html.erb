@@ -1,21 +1,21 @@
-<h1 class="jTitle text-center">New Car</h1>
-<div class="container d-flex justify-content-center">
+<div class="abannerthree">
+  <div class="containerseven">
+    <h1 class="jTitle text-center">New Car</h1>
+  </div>
+</div>
 
-  <%= simple_form_for(@car) do |f| %>
-
-    <div class="form-inputs text-center border jTitle rounded-lg mb-2">
+<div class="containereight">
+    <%= simple_form_for(@car) do |f| %>
       <%= f.input :model %>
       <%= f.input :year %>
       <%= f.input :price %>
       <%= f.input :location %>
-      <%= f.input :description %>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :description, as: :text %>
+      <%#= f.input :photo, as: :file %>
+      <%= f.submit "Add Car", class: "btn btn-success btn-block" %>
+      <% end %>
     </div>
-    <div class="text-center">
-      <%= f.submit "Add Car", class: "jTitle rounded-lg" %>
+
+    <div class="abuttonstwo">
+      <%= link_to 'Back to home page', root_path, class: "btn btn-warning" %>
     </div>
-</div>
-    <div class="form-actions btn mt-3">
-      <%= link_to 'Back to home page', root_path, class: "jTitle rounded-lg" %>
-    </div>
-  <% end %>
