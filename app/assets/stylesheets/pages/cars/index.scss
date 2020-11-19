@@ -1,3 +1,4 @@
+@import "carcard";
 .lpages {
   padding: 30px;
 }
@@ -28,14 +29,12 @@
 
   }
  }
-.card {
- height: 60px;
- width: 90px;
- padding: 15px;
- margin: 15px;
 
+ .lcar-card  {
+  display: grid;
 }
 
-
-
-
+.row {
+  display: flex;
+  justify: content;
+}

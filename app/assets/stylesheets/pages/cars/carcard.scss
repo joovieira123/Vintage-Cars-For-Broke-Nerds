@@ -1,0 +1,55 @@
+
+.card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.lcar-card > .car-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.lcard h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.lcard p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.lcard .lcar-crad-info {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+ .lcar-card-price .card-car-owner {
+}
+
+.lcardavatar .avatar-bordered {
+    position: absolute;
+    right: 16px;
+    bottom: 85px;
+    width: 40px;
+
+}
+
+ .lcard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+
