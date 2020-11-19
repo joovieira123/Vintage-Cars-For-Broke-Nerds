@@ -8,7 +8,7 @@
 
 <div class="acontainertwo">
     <div class="row">
-        <button type="button" class="btn btn-primary btn-lg btn-block"><%= link_to "Hire #{@car.model}",  new_car_booking_path(@car) %></button>
+        <%= link_to "Hire #{@car.model}",  new_car_booking_path(@car), class: "btn btn-primary btn-lg btn-block" %>
       </div>
     </div>
 
@@ -21,6 +21,8 @@
       <h4>Description of car</h4>
       <br>
         <p><%= @car.description %></p>
+      </br>
+      <h4>Owner of car</h4>
     </div>
 
     <div class="col">
@@ -36,16 +38,16 @@
     <div class="acontainerfour">
   <div class="row">
     <div class="col-4">
-      <button type="button" class="btn btn-secondary btn-lg btn-block" id="button1"><%= link_to 'Return to home page', root_path %></button>
+      <%= link_to 'Return to home page', root_path, class: "btn btn-secondary btn-lg btn-block" %>
     </div>
     <div class="col-4">
-      <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to 'Edit car', edit_car_path(@car) %></button>
+       <%= link_to 'Edit car', edit_car_path(@car), class: "btn btn-secondary btn-lg btn-block" %>
     </div>
     <div class="col-4">
-      <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "Remove #{@car.model}",
+      <%= link_to "Remove #{@car.model}",
             car_path(@car),
             method: :delete,
-            data: { confirm: "Are you sure?" } %></button>
+            data: { confirm: "Are you sure?" }, class: "btn btn-secondary btn-lg btn-block" %>
     </div>
   </div>
 </div>
