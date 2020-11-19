@@ -7,26 +7,27 @@
   border-radius: 10px;
 }
 
-.card > img {
+.lcar-card > .car-image {
   height: 200px;
   width: 100%;
   object-fit: cover;
+
 }
 
-.card h2 {
+.lcard h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card p {
+.lcard p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
 
-.card .lcar-crad-info {
+.lcard .lcar-crad-info {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -34,12 +35,21 @@
   position: relative;
 }
 
-.lcar-crad-info .card-car-owner {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 50%;
+ .lcar-card-price .card-car-owner {
+}
 
+.lcardavatar .avatar-bordered {
+    position: absolute;
+    right: 16px;
+    bottom: 85px;
+    width: 40px;
+
+}
+
+ .lcard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
 
 
