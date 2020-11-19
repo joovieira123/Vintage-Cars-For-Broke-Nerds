@@ -1,37 +1,27 @@
 @import "carcard";
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  }
+
+  .banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
 .lpages {
   padding: 30px;
  }
-.lcarimage{
 
-}
-.lTitle{
-    color: $yellow;
-    background: $blue;
-    padding: 10px;
-    margin:20px;
-    height: 300px;
-    length: 100px;
-    text-align: center;
 
-    h1{
-      font-size: 32px;
-      padding-top: 90px;
 
-    }
- }
- .lTitle{
-  p{
-    font-size: 12px;
 
-  }
- }
-
- .lcar-card  {
-  display: grid;
-}
 
 .row {
   display: flex;
-  justify: content;
+  justify-content: space-betwee;
+
 }

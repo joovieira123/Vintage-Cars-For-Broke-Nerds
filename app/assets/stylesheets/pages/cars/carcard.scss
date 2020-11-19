@@ -1,10 +1,14 @@
 
 .card {
   overflow: hidden;
-  background: white;
+  background: $lightblue;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 15px;
   border-radius: 10px;
+  height: 270px;
+  width: 810px;
+
+
 }
 
 .lcar-card > .car-image {
@@ -35,21 +39,12 @@
   position: relative;
 }
 
- .lcar-card-price .card-car-owner {
-}
-
-.lcardavatar .avatar-bordered {
+ .avatar-bordered {
     position: absolute;
     right: 16px;
-    bottom: 85px;
+    bottom: 48px;
     width: 40px;
-
 }
 
- .lcard {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
 
 
