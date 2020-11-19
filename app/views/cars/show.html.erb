@@ -1,32 +1,54 @@
 <div class="abanner">
+</div>
+
   <div class="acontainer">
-    <h1><%= @car.model %> - <%= @car.year %></h1>
+    <h1><%= @car.model %></h1>
     <h3>Price per day: <%=@car.price %></h3>
   </div>
-</div>
 
 <div class="acontainertwo">
-  <div class="ainfo">
-    <h1><%= @car.model %></h1>
-    <h2>Year of car: <%= @car.year %></h2>
-    <h3>Location of car: <%=@car.location %></h3>
-    <br>
-    <h4>Description of car</h4>
-    <br>
-      <p><%= @car.description %></p>
-  </div>
+    <div class="row">
+        <%= link_to "Hire #{@car.model}",  new_car_booking_path(@car), class: "btn btn-primary btn-lg btn-block" %>
+      </div>
+    </div>
 
-  <div class="map">
-    <p>Map</p>
+<div class="acontainerthree">
+  <div class="row">
+    <div class="col">
+      <h2>Year of car: <%= @car.year %></h2>
+      <h3>Location of car: <%=@car.location %></h3>
+      <br>
+      <h4>Description of car</h4>
+      <br>
+        <p><%= @car.description %></p>
+      </br>
+      <h4>Owner of car</h4>
+    </div>
+
+    <div class="col">
+      <div id="map"
+         style="width: 100%; height: 100%;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
   </div>
 </div>
 
-  <br>
-<%= link_to "Hire this #{@car.model}",  new_car_booking_path(@car) %>
-<br>
-<%= link_to 'Return to home page', root_path %> |
-<%= link_to 'Edit car', edit_car_path(@car) %> |
-<%= link_to "Remove #{@car.model}",
+    <div class="acontainerfour">
+  <div class="row">
+    <div class="col-4">
+      <%= link_to 'Return to home page', root_path, class: "btn btn-secondary btn-lg btn-block" %>
+    </div>
+    <div class="col-4">
+       <%= link_to 'Edit car', edit_car_path(@car), class: "btn btn-secondary btn-lg btn-block" %>
+    </div>
+    <div class="col-4">
+      <%= link_to "Remove #{@car.model}",
             car_path(@car),
             method: :delete,
-            data: { confirm: "Are you sure?" } %>
+            data: { confirm: "Are you sure?" }, class: "btn btn-secondary btn-lg btn-block" %>
+    </div>
+  </div>
+</div>
+

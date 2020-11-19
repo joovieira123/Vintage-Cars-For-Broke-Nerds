@@ -7,6 +7,15 @@
   </div>
   <br>
   <!-- Have to look up how to create the searchbar -->
+  <%= form_tag root_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a car"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+
   <br>
   <button type="button" class="btn btn-success"><%= link_to "Go to your bookings", bookings_path %></button>
   <button type="button" class="btn btn-outline-success">+<%= link_to "Add a new car", new_car_path %></button>
