@@ -7,6 +7,7 @@ class CarsController < ApplicationController
   end
 
   def show
+    @markers = [{ lat: @car.latitude, lng: @car.longitude }]
   end
 
   def new
