@@ -4,25 +4,24 @@
   </div>
 </div>
 
-<div class="container pt-6">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-6 col-lg-4">
-      <form action="#">
+<div class="containersix">
         <%= simple_form_for(@car) do |f| %>
           <%= f.input :model %>
           <%= f.input :year %>
           <%= f.input :price %>
           <%= f.input :location %>
-          <%= f.input :description %>
-        </div>
-      </div>
-  </form>
-    <div class="text-center">
-      <%= f.submit "Update Car", class: "btn btn-secondary btn-lg" %>
-    </div>
+          <%= f.input :description, as: :text %>
+          <%= f.submit "Update Car", class: "btn btn-success btn-block" %>
+          <% end %>
 </div>
-    <div class="form-actions btn mt-3">
-      <%= link_to 'Back To Home Page', root_path, class: "btn btn-secondary btn-lg" %>
-      <%= link_to 'Return To Car', car_path(@car), class: "btn btn-secondary btn-lg" %>
+
+    <div class="abuttons">
+      <div class="row">
+        <div class="col-6">
+      <%= link_to 'Back To Home Page', root_path, class: "btn btn-success btn-lg btn-block" %>
+        </div>
+        <div class="col-6">
+      <%= link_to 'Return To Car', car_path(@car), class: "btn btn-success btn-lg btn-block" %>
+        </div>
+    </div>
   </div>
-<% end %>
