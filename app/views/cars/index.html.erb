@@ -1,26 +1,32 @@
 <div class="lpages">
   <div class="lcarimage">
-  <div class="lTitle">
+    <div class="lTitle">
       <h1>Vintage Cars for Broke Nerds</h1>
       <p>Choose Vintage car for a nice round trip in your city</p>
-  </div>
+    </div>
   </div>
   <br>
   <!-- Have to look up how to create the searchbar -->
   <br>
-  <%= link_to "Go to your bookings", bookings_path %>
-  <%= link_to "Add a new car", new_car_path %>
+  <button type="button" class="btn btn-success"><%= link_to "Go to your bookings", bookings_path %></button>
+  <button type="button" class="btn btn-outline-success">+<%= link_to "Add a new car", new_car_path %></button>
   <div class="lcontainer">
     <div class="row">
-              <% @cars.each do |car| %>
-             <div class="card db-light col-12 col-md-6 col-lg-4">
-
-        <div class="car.card">
-            <%= link_to car.model, car_path(car)%> | <%= car.location %> | <%= car.price %> | <%= car.year %> | <%= car.description %>
+      <% @cars.each do |car| %>
+        <div class="card col-12 col-md-6 col-lg-4" id="card">
+          <div class="lcar-card">
+            <%= image_tag "" class: %>
+            <div class="lcar-crad-info">
+              <h4><%= link_to car.model, car_path(car)%>| <%= car.year %></h4>
+              <h5><%= car.location %></h5>
+              <p><%= car.description %></p>
+              </div>
+              <h4 class="lcar-card-price"><%= car.price %> </h4>
+              <!-- <img src="../assets/images/logo.png" class="card-car-owner avatar-bordered"/> -->
+              <%= image_tag "logo.png", class: "card-car-owner avatar-bordered" %>
           </div>
         </div>
-        <% end %>
-
+      <% end %>
     </div>
   </div>
 </div>
