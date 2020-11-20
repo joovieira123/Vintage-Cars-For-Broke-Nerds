@@ -1,5 +1,9 @@
 <div class="abanner">
-  <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
+  <% if @car.photo.attached? %>
+    <%= cl_image_tag @car.photo.key, height: 500, width: 1000, crop: :fill %>
+  <% else %>
+    <%= image_tag "logo.png", class: "car-image" %>
+  <% end %>
 </div>
 
   <div class="acontainer">
