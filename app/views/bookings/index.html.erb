@@ -1,9 +1,32 @@
-<ol>
-<% @bookings.each do |booking| %>
-<li>
-  <%= booking.date %> - <%= link_to booking.comments, booking_path(booking) %>
-</li>
-<% end %>
-</ol>
+
 
 <%= link_to 'Return to home page', root_path, class: "btn btn-success btn-lg"%>
+
+<div class="b-l-container">
+	<div class="b-l-list">
+	  <div class="row d-flex justify-content-center">
+		<% @bookings.each do |booking| %>
+		<div class="booking col-12 col-sm-6 col-lg-6">
+		  <div class="b-card">
+		  	 <% if booking.car.photo.attached? %>
+              <%= cl_image_tag booking.car.photo.key, height: 300, width: 400, crop: :fill, class: "car-image" %>
+            <% else %>
+              <%= image_tag "logo.png", class: "car-image" %>
+            <% end %>
+            <div class="booking-info">
+            	<h4> <%= link_to booking.car.model, booking_path(booking) %> | <%= booking.car.price %></h4>
+            	<h6> <%= booking.date %> </h6>
+            	<div class="avatar-booking">
+            		<%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: " avatar-bordered-boking" %>
+            	</div>
+
+            </div>
+
+
+			
+		  </div>
+	    </div>
+		<% end %>
+	   </div>
+	</div>	
+</div>
