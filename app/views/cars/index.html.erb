@@ -39,11 +39,13 @@
             <% end %>
 
             <div class="lcar-crad-info">
-              <h4><%= link_to car.model, car_path(car)%>| <%= car.year %></h4>
+              <h4><%= link_to car.model, car_path(car)%> | <%= car.year %></h4>
               <h5><%= car.location %></h5>
-              <p><%= car.description %></p>
+              <div class="lprice">
+                <p><%= car.price %></p>
+              </div>
               <div class="lcardavatar">
-              <h4 class="lcar-card-price"><%= car.price %> </h4>
+              <h4 class="lcar-card-price"></h4>
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: " avatar-bordered" %>
               <!-- <img src="../assets/images/logo.png" class="card-car-owner avatar-bordered"/> -->
             </div>
