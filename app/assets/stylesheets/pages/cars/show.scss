@@ -17,7 +17,7 @@
 
 .col {
   color: $blue;
-  background: $lightblue;
+  background: $yellow;
   height: 500px;
   border-radius: 10px;
   text-align: center;
@@ -31,7 +31,7 @@
 }
 
 .btn-primary {
-  padding: 40px;
+  padding: 30px;
   margin: 10px 20px 10px 20px;
   border-radius: 10px;
   color: $yellow;
@@ -41,7 +41,7 @@
 }
 
 .btn-primary:hover {
-  background: $yellow;
+  background: $lightblue;
   color: $blue;
 }
 
@@ -60,6 +60,15 @@
 }
 
 .btn-secondary:hover {
-  background: $yellow;
+  background: $lightblue;
   color: $blue;
+}
+
+.avatar-bordered-two {
+  border-radius: 100%;
+  width: 100%;
+  max-width: 100px;
+  margin: 10px;
+  border: 2px solid $blue;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
