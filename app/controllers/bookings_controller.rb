@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @booking.car = @car
     @booking.user = current_user
     if @booking.save
-      redirect_to car_path(@car)
+      redirect_to booking_path(@booking)
     else
       render :new
     end
