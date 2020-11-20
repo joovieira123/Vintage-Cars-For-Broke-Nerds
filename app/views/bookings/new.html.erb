@@ -7,11 +7,11 @@
 <div class="containernine">
   <%= simple_form_for [@car, @booking] do |f| %>
       <%= f.input :comments, as: :text %>
-      <%= f.input :date %>
-      <%= f.submit "Add A Booking", class: "btn btn-success btn-block" %>
+      <%= f.input :date, html5: true %>
+      <%= f.submit "Add Booking", class: "btn btn-success btn-block" %>
       <% end %>
-    </div>
+</div>
 
-    <div class="abuttonstwo">
-      <%= link_to 'Return To car', car_path(@car), class: "btn btn-warning" %>
-    </div>
+<div class="abuttonstwo">
+  <%= link_to 'Return To car', car_path(@car), class: "btn btn-warning" %>
+</div>
