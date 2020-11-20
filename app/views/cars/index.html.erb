@@ -18,15 +18,13 @@
         class: "form-control",
         placeholder: "Find a car"
       %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+
+<br>
+<div class="abuttonsfour">
+  <%= submit_tag "Search", class: "btn btn-warning btn-lg" %>
       <% end %>
-
-
-
-
-  <br>
-  <button type="button" class="btn btn-success"><%= link_to "Go to your bookings", bookings_path %></button>
-  <button type="button" class="btn btn-outline-success">+<%= link_to "Add a new car", new_car_path %></button>
+  <%= link_to 'Go to your bookings', bookings_path, class: "btn btn-secondary btn-lg" %>
+</div>
   <div class="lcontainer">
     <div class="row d-flex justify-content-center">
       <% @cars.each do |car| %>
@@ -56,3 +54,7 @@
     </div>
   </div>
 </div>
+<div class = abuttonstwo>
+  <%= link_to 'Add a new car', new_car_path, class: "btn btn-success btn-lg" %>
+</div>
+
