@@ -1,28 +1,39 @@
-<div class="title">
-  <h1>Vintage Cars for Broke Nerds</h1>
-  <h4>Your Car has been booked and confirmed</h4>
+<div class="abanner">
 </div>
+  <div class="acontainer">
+    <h1>Yippee!</h1>
+    <h1>Your booking of the <%=@booking.car.model %> has been confirmed</h1>
+  </div>
+<div class="containerten">
+
+<h2>Information about your booking</h2>
 <br>
-<div>
-  <br>
-  <h1>Image of car</h1>
-  <br>
-<p> your reservation of the car "***<%= @booking.car.model %>****" has ben confirmd </p>
-<h3>cars information</h3>
-  <ul>
-    <li><%= @booking.user.email %></li>
-    <li><%= @booking.car.location %> </li>
-    <li><%= @booking.date %></li>
-    <li><%= @booking.car.price %></li>
-    <li><%= @booking.comments %> </li>
-  </ul>
-  <%= link_to 'Return to bookings', bookings_path %>
-  <%= link_to "Return to home page", root_path, class: "btn btn-success btn-lg"%>
-
+    <h4>Your contact email address:</h4>
+      <p><%= @booking.user.email %></p>
+    <h4>Where you must go to collect the car:</h4>
+      <p><%= @booking.car.location %></p>
+    <h4>The date of your booking:</h4>
+      <p><%= @booking.date %></p>
+    <h4>The price of your booking:</h4>
+      <p><%= @booking.car.price %></p>
+    <h4>Your comments:</h4>
+      <p><%= @booking.comments %></p>
 </div>
 
-
-<%= link_to "Remove a booking",
+<div class="acontainerfour">
+  <div class="row">
+    <div class="col-4">
+      <%= link_to 'Return to bookings', bookings_path, class: "btn btn-secondary btn-lg btn-block" %>
+    </div>
+    <div class="col-4">
+      <%= link_to "Return to home page", root_path, class: "btn btn-secondary btn-lg btn-block" %>
+    </div>
+    <div class="col-4">
+      <%= link_to "Remove booking",
             booking_path(@booking),
             method: :delete,
-            data: { confirm: "Are you sure?" } %>
+            data: { confirm: "Are you sure?" }, class: "btn btn-secondary btn-lg btn-block" %>
+    </div>
+  </div>
+</div>
+

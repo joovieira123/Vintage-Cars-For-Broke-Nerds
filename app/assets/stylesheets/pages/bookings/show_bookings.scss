@@ -1,0 +1,22 @@
+.containerten {
+  border: 2px solid $blue;
+  background: $yellow;
+  padding: 20px;
+  border-radius: 10px;
+  color: $blue;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+ .containerten p {
+   font-weight: bold;
+}
+
+.containerten h2 {
+  font-weight: bold;
+}
+
