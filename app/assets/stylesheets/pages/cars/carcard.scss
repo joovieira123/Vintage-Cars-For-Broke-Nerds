@@ -14,7 +14,7 @@
 .lcar-card > .car-image {
   height: 200px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 
 }
 
@@ -28,6 +28,7 @@
   font-size: 12px;
   opacity: .7;
   margin: 0;
+
 }
 
 
